@@ -1,0 +1,3 @@
+# Ignorar carpetas generadas
+/node_modules
+node_modules/

@@ -1,0 +1,29 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Clone Cypress Scripts Repository
+        run: git clone https://github.com/andresmontcast7/cypress-scripts-repo.git
+
+      - name: Install Dependencies
+        run: |
+          cd cypress-scripts-repo
+          npm install
+
+      - name: Run Cypress Tests
+        run: |
+          cd cypress-scripts-repo
+          npx cypress run
+
+          
