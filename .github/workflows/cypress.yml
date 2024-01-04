@@ -24,6 +24,6 @@ jobs:
       - name: Run Cypress Tests
         run: |
           cd cypress-scripts-repo
-          npx cypress run
+          npx cypress run --headless
 
           
